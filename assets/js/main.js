@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   tl.fromTo(
     ".loader",
-    { duration: 2, width: "100%", ease: "expo.out" },
+    { duration: 2, width: "100vw", ease: "expo.out" },
     { duration: 0.7, width: "0%", delay: 5 }
   )
     .fromTo(
