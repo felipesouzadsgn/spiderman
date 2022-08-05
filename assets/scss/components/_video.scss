@@ -1,0 +1,27 @@
+.play {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: linear-gradient(
+      90deg,
+      #0b0c10 24.48%,
+      rgba(11, 12, 16, 0.8) 54.09%,
+      #0c0c10 77.6%
+    );
+  }
+}

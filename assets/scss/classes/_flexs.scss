@@ -1,0 +1,70 @@
+// DISPLAY FLEX
+
+// FLEX
+
+.flex {
+  display: flex;
+}
+
+.flex-w {
+  flex-wrap: wrap;
+}
+
+.flex-nw {
+  flex-wrap: nowrap;
+}
+
+// JUSTIFY
+.flex-s {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.flex-e {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flex-c {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-sb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-sa {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-se {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+// JUSTIFY & ALIGN
+
+.flex-xy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// ALIGN-ITEMS
+.flex-a-s {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-a-e {
+  display: flex;
+  align-items: flex-end;
+}
+
+.flex-a-c {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,100 @@
+.header {
+  width: 100%;
+  padding-top: 16px;
+}
+
+.nav {
+  max-width: 1440px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    gap: 24px;
+
+    @include responsive () {
+      display: none;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 8px 16px;
+    color: $gray-3;
+    font-size: 14px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    transition: 0.7s ease;
+
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -40px;
+      left: 50%;
+
+      display: block;
+
+      width: 2px;
+      height: 0;
+
+      transition: 0.7s ease;
+
+      background: linear-gradient(180deg, #92070a00 0%, #ea1d22 100%);
+    }
+
+    &:hover {
+      color: $white-light;
+
+      &::after {
+        height: 40px;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 16px;
+
+    @include responsive () {
+      display: none;
+    }
+
+    svg {
+      cursor: pointer;
+      width: 24px;
+
+      path, circle {
+        transition: 0.7s ease;
+      }
+
+      &:hover {
+        path, circle {
+          fill: $red-light;
+          transform: translate3d(0, -3px, 0);
+        }
+      }
+    }
+  }
+
+  &__bx {
+    width: 48px;
+    height: 48px;
+    display: none;
+
+    @include responsive () {
+      display: block;
+    }
+  }
+}

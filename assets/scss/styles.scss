@@ -1,0 +1,28 @@
+// RESPONSIVE 
+@import "./screen/responsive";
+
+// CONFIG
+@import "./config/colors";
+@import "./config/spacing";
+
+// CLASSES
+@import "./classes/gaps";
+@import "./classes/margins";
+@import "./classes/paddings";
+@import "./classes/flexs";
+@import "./classes/widths";
+
+// BASE
+@import "./base/base";
+
+// ANIMATIONS
+@import "./animations/animations";
+
+// LAYOUT
+@import "./layout/layout";
+
+// COMPONENTS
+@import "./components/loader";
+@import "./components/header";
+@import "./components/hero";
+@import "./components/video";

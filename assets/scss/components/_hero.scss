@@ -1,0 +1,177 @@
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 36px 16px;
+  overflow: hidden;
+  margin: 0 auto;
+  height: 73vh;
+
+  @include responsive() {
+    flex-direction: column;
+    height: auto;
+  }
+
+  &__info {
+    max-width: 576px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__letter {
+    width: 100%;
+  }
+
+  &__letter-subtitle {
+    max-width: 80%;
+    margin-top: -7%;
+
+    @include responsive() {
+      margin-top: -10%;
+    }
+  }
+
+  &__description {
+    @include responsive() {
+      text-align: center;
+    }
+  }
+
+  &__img-spiderman {
+    width: 110%;
+    transform: translate3d(-150px, 0, 0);
+
+    @include responsive() {
+      width: 100%;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &__btns {
+    @include responsive() {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__btn-primary {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 3px;
+
+    transform: skewX(-10deg);
+    text-transform: uppercase;
+
+    background: linear-gradient(
+      225deg,
+      rgba(234, 29, 34, 0.8) 0%,
+      rgba(146, 7, 10, 0.8) 100%
+    );
+
+    position: relative;
+    transition: 0.7s ease;
+
+    &::after {
+      content: "";
+      display: block;
+
+      width: 20%;
+      height: 70%;
+
+      position: absolute;
+      top: -2px;
+      left: -2px;
+
+      border-top: 3px solid $white-normal;
+      border-left: 3px solid $white-normal;
+      border-radius: 3px;
+
+      opacity: 0;
+      transition: 0.7s ease;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+
+      width: 20%;
+      height: 70%;
+
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+
+      border-bottom: 3px solid $white-normal;
+      border-right: 3px solid $white-normal;
+      border-radius: 3px;
+
+      opacity: 0;
+      transition: 0.7s ease;
+    }
+
+    &:hover {
+      transform: skewX(-10deg) scale(1.05);
+
+      &::after {
+        opacity: 1;
+      }
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__btn-secondary {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 3px;
+
+    transform: skewX(-10deg);
+    text-transform: uppercase;
+
+    background-color: transparent;
+    border: 2px solid $red-normal;
+
+    position: relative;
+    transition: 0.7s ease;
+
+    &::after {
+      content: "";
+      display: block;
+
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      z-index: -1;
+
+      width: 0%;
+      height: 103%;
+
+      background: linear-gradient(
+        225deg,
+        rgba(234, 29, 34, 0.8) 0%,
+        rgba(146, 7, 10, 0.8) 100%
+      );
+
+      transition: 0.7s ease;
+    }
+
+    &:hover {
+      &::after {
+        width: 102%;
+      }
+    }
+  }
+
+  &__logos {
+    @include responsive() {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
