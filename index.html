@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--======================= CSS ========================-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!--======================= JS SVG INJECT ========================-->
+    <script src="assets/js/svg-inject.min.js"></script>
+    <!--======================= GOOGLE FONTS ========================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Spider-man: Miles Moraes | PS5</title>
+  </head>
+  <body>
+    <!--======================= HEADER ========================-->
+    <header class="header">
+      <nav class="nav px-2">
+        <div class="nav__menu">
+          <img
+            src="assets/svg/spider-logo.svg"
+            onload="SVGInject(this)"
+            class="nav__logo"
+          />
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Story</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Wallpapers</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">#BeYourself</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__social">
+          <a href="#" class="nav__social-link">
+            <img
+              class="nav__social-icon"
+              src="assets/svg/icon-facebook.svg"
+              alt="Facebook"
+              onload="SVGInject(this)"
+            />
+          </a>
+
+          <a href="#" class="nav__social-link">
+            <img
+              class="nav__social-icon"
+              src="assets/svg/icon-instagram.svg"
+              alt="Facebook"
+              onload="SVGInject(this)"
+            />
+          </a>
+
+          <a href="#" class="nav__social-link">
+            <img
+              class="nav__social-icon"
+              src="assets/svg/icon-twitter.svg"
+              alt="Facebook"
+              onload="SVGInject(this)"
+            />
+          </a>
+
+          <a href="#" class="nav__social-link">
+            <img
+              class="nav__social-icon"
+              src="assets/svg/icon-youtube.svg"
+              alt="Facebook"
+              onload="SVGInject(this)"
+            />
+          </a>
+        </div>
+        <div class="nav__bx"></div>
+      </nav>
+    </header>
+    <!--======================= BG LOADER ========================-->
+    <div class="loader flex-xy">
+      <img src="assets/svg/spider-loader.svg" onload="SVGInject(this)" />
+    </div>
+    <!--======================= BG - VIDEO ========================-->
+    <div class="play flex-xy 1">
+      <video class="play__video" autoplay muted loop>
+        <source src="/assets/video/spiderman.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <!--======================= MAIN ========================-->
+    <main class="container px-2">
+      <!--======================= HERO ========================-->
+      <section class="hero mx-auto">
+        <div class="hero__info">
+          <div class="hero__letter">
+            <img
+              class="hero__letter-title mx-auto 2"
+              src="/assets/svg/letter-spider-man.svg"
+              alt="Spider-man"
+              onload="SVGInject(this)"
+            />
+            <img
+              class="hero__letter-subtitle mx-auto 3"
+              src="/assets/svg/subtitle.svg"
+              alt="Miles Moraes"
+              onload="SVGInject(this)"
+            />
+          </div>
+          <p class="hero__description my-4 4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+            reprehenderit molestias vitae autem quibusdam ipsa quasi quia
+            tempora doloribus, itaque, eius tempore. Ut voluptates commodi
+            ratione sapiente reprehenderit velit ea.
+          </p>
+
+          <div class="hero__btns gxx-3 flex-w">
+            <a href="#" class="hero__btn-primary 5">Pre-order now</a>
+            <a href="#" class="hero__btn-secondary 6">Watch the teaser</a>
+          </div>
+          <div class="hero__logos flex-xy gx-3 mt-3">
+            <a href="#" class="7">
+              <img
+                src="assets/svg/ps.svg"
+                alt="Playstation"
+                onload="SVGInject(this)"
+              />
+            </a>
+            <a href="" class="8">
+              <img
+                src="assets/svg/marvel.svg"
+                alt="Marvel"
+                onload="SVGInject(this)"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="hero__img">
+          <div class="js-tilt">
+            <img
+              class="hero__img-spiderman 9"
+              src="/assets/img/spider-img.png"
+              alt="Spider-man"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--======================= MAIN JS ========================-->
+    <script src="/assets/js/main.js"></script>
+    <!--======================= JQUERY CDN ========================-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!--======================= TILT CDN ========================-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!--======================= GSAP CDN ========================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+
+    <script>
+      $(".js-tilt").tilt({
+        perspective: 1000,
+        reset: false,
+        scale: 1.0,
+      });
+    </script>
+  </body>
+</html>
