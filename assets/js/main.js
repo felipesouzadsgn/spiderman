@@ -7,11 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     { duration: 0.7, width: "0%", delay: 5 }
   )
     .fromTo(
-      ".nav__logo",
-      { y: -50, opacity: 0 },
-      { y: 0, opacity: 1, stagger: 0.2 }
-    )
-    .fromTo(
       ".nav__item",
       { y: -50, opacity: 0 },
       { y: 0, opacity: 1, stagger: 0.2 }
@@ -27,24 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
       { y: -50, opacity: 0 },
       { y: 0, opacity: 1, stagger: 0.2 }
     )
-    .fromTo(
-      ".play",
-      { width: "0%", opacity: 0 },
-      { durantion: 2, width: "100%", opacity: 1, ease: "expo.out" },
-      "-=3"
-    )
-    .fromTo(
-      ".hero__letter-title",
-      { y: -50, opacity: 0 },
-      { y: 0, opacity: 1, stagger: 0.2 },
-      "-=2"
-    )
-    .fromTo(
-      ".hero__letter-subtitle",
-      { y: -50, opacity: 0 },
-      { y: 0, opacity: 1, stagger: 0.2 },
-      "-=2"
-    );
 
   /** 
    const timeline = new TimelineMax();
