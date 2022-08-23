@@ -18,6 +18,18 @@ if (navClose) {
   });
 }
 
+/* Remove Menu Mobile */
+
+const navLink = document.querySelectorAll(".nav__link");
+
+navLink.forEach((n) =>
+  n.addEventListener("click", () => {
+    const navMenu = document.getElementById("nav-menu");
+    navMenu.classList.remove("show-menu");
+  })
+);
+
+
 /*======= GSAP ANIMATION =======*/
 document.addEventListener("DOMContentLoaded", () => {
   const tl = gsap.timeline();
