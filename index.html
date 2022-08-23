@@ -15,18 +15,23 @@
       href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
+    <!--======= REMIX ICONS =======-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <title>Spider-man: Miles Moraes | PS5</title>
   </head>
   <body>
     <!--======================= HEADER ========================-->
     <header class="header">
       <nav class="nav px-2">
-        <div class="nav__menu">
-          <img
-            src="assets/svg/spider-logo.svg"
-            onload="SVGInject(this)"
-            class="nav__logo"
-          />
+        <img
+          src="assets/svg/spider-logo.svg"
+          onload="SVGInject(this)"
+          class="nav__logo"
+        />
+        <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
               <a href="#" class="nav__link">Home</a>
@@ -41,45 +46,51 @@
               <a href="#" class="nav__link">#BeYourself</a>
             </li>
           </ul>
+          <div class="nav__social">
+            <a href="#" class="nav__social-link">
+              <img
+                class="nav__social-icon"
+                src="assets/svg/icon-facebook.svg"
+                alt="Facebook"
+                onload="SVGInject(this)"
+              />
+            </a>
+
+            <a href="#" class="nav__social-link">
+              <img
+                class="nav__social-icon"
+                src="assets/svg/icon-instagram.svg"
+                alt="Facebook"
+                onload="SVGInject(this)"
+              />
+            </a>
+
+            <a href="#" class="nav__social-link">
+              <img
+                class="nav__social-icon"
+                src="assets/svg/icon-twitter.svg"
+                alt="Facebook"
+                onload="SVGInject(this)"
+              />
+            </a>
+
+            <a href="#" class="nav__social-link">
+              <img
+                class="nav__social-icon"
+                src="assets/svg/icon-youtube.svg"
+                alt="Facebook"
+                onload="SVGInject(this)"
+              />
+            </a>
+          </div>
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
         </div>
-        <div class="nav__social">
-          <a href="#" class="nav__social-link">
-            <img
-              class="nav__social-icon"
-              src="assets/svg/icon-facebook.svg"
-              alt="Facebook"
-              onload="SVGInject(this)"
-            />
-          </a>
 
-          <a href="#" class="nav__social-link">
-            <img
-              class="nav__social-icon"
-              src="assets/svg/icon-instagram.svg"
-              alt="Facebook"
-              onload="SVGInject(this)"
-            />
-          </a>
-
-          <a href="#" class="nav__social-link">
-            <img
-              class="nav__social-icon"
-              src="assets/svg/icon-twitter.svg"
-              alt="Facebook"
-              onload="SVGInject(this)"
-            />
-          </a>
-
-          <a href="#" class="nav__social-link">
-            <img
-              class="nav__social-icon"
-              src="assets/svg/icon-youtube.svg"
-              alt="Facebook"
-              onload="SVGInject(this)"
-            />
-          </a>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line"></i>
         </div>
-        <div class="nav__bx"></div>
       </nav>
     </header>
     <!--======================= BG LOADER ========================-->
@@ -119,8 +130,8 @@
           </p>
 
           <div class="hero__btns gxx-3 flex-w">
-            <a href="#" class="hero__btn-primary ">Pre-order now</a>
-            <a href="#" class="hero__btn-secondary ">Watch the teaser</a>
+            <a href="#" class="hero__btn-primary">Pre-order now</a>
+            <a href="#" class="hero__btn-secondary">Watch the teaser</a>
           </div>
           <div class="hero__logos flex-xy gx-3 mt-3">
             <a href="#">
