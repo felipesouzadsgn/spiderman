@@ -870,7 +870,7 @@ body {
 img,
 svg {
   display: block;
-  width: 100%;
+  max-width: 100%;
 }
 
 .border {
@@ -893,7 +893,7 @@ p {
 .loader {
   width: 100%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
@@ -904,11 +904,16 @@ p {
 .header {
   width: 100%;
   padding-top: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: background 0.3s;
 }
 
 .nav {
   max-width: 1440px;
-  margin: 0 auto;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -916,15 +921,15 @@ p {
 .nav__menu {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  transition: top 0.3s;
+}
+.nav__toggle, .nav__close {
+  display: none;
 }
 .nav__list {
   display: flex;
-  gap: 24px;
-}
-@media screen and (max-width: 960px) {
-  .nav__list {
-    display: none;
-  }
 }
 .nav__link {
   display: inline-block;
@@ -957,32 +962,89 @@ p {
 .nav__social {
   display: flex;
   gap: 16px;
+  padding: 2rem;
 }
 @media screen and (max-width: 960px) {
   .nav__social {
-    display: none;
+    display: flex;
   }
 }
 .nav__social svg {
   cursor: pointer;
   width: 24px;
 }
-.nav__social svg path, .nav__social svg circle {
+.nav__social svg path,
+.nav__social svg circle {
   transition: 0.7s ease;
 }
-.nav__social svg:hover path, .nav__social svg:hover circle {
+.nav__social svg:hover path,
+.nav__social svg:hover circle {
   fill: #fa3c41;
   transform: translate3d(0, -3px, 0);
 }
-.nav__bx {
-  width: 48px;
-  height: 48px;
-  display: none;
+.nav__toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #f8fbff;
 }
-@media screen and (max-width: 960px) {
-  .nav__bx {
+@media screen and (max-width: 1024px) {
+  .nav__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: initial;
+    z-index: 111;
+    position: fixed;
+    top: -100%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(180deg, 12%, 8%, 0.8);
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+    transition: top 0.3s;
+  }
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  .nav__close {
+    position: absolute;
+    font-size: 1.5rem;
+    top: 2.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+    color: #f8fbff;
+  }
+  .nav__toggle, .nav__close {
     display: block;
   }
+  .nav__social {
+    display: flex;
+    gap: 16px;
+    padding: 2rem;
+  }
+  .nav__social svg {
+    cursor: pointer;
+    width: 24px;
+  }
+  .nav__social svg path,
+.nav__social svg circle {
+    transition: 0.7s ease;
+  }
+  .nav__social svg:hover path,
+.nav__social svg:hover circle {
+    fill: #fa3c41;
+    transform: translate3d(0, -3px, 0);
+  }
+}
+
+/* Show menu */
+.show-menu {
+  top: 0;
 }
 
 .hero {
@@ -990,7 +1052,7 @@ p {
   align-items: center;
   padding: 36px 16px;
   overflow: hidden;
-  margin: 0 auto;
+  margin: 8rem auto;
   height: 73vh;
 }
 @media screen and (max-width: 960px) {
