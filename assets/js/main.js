@@ -1,3 +1,24 @@
+/*======= SHOW MENU ======= */
+const navMenu = document.getElementById("nav-menu"),
+  navToggle = document.getElementById("nav-toggle"),
+  navClose = document.getElementById("nav-close");
+
+/* Show Menu */
+/* Validate if constant exists */
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.add("show-menu");
+  });
+}
+
+/* Menu Hidden */
+if (navClose) {
+  navClose.addEventListener("click", () => {
+    navMenu.classList.remove("show-menu");
+  });
+}
+
+/*======= GSAP ANIMATION =======*/
 document.addEventListener("DOMContentLoaded", () => {
   const tl = gsap.timeline();
 
@@ -21,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ".nav__bx",
       { y: -50, opacity: 0 },
       { y: 0, opacity: 1, stagger: 0.2 }
-    )
+    );
 
   /** 
    const timeline = new TimelineMax();
